@@ -61,6 +61,9 @@ const App = () => {
                 key={task?.title + " " + index}
                 onClick={() => {
                   setSelectItem(index);
+                  if (selectItem === index) {
+                    setSelectItem(null);
+                  }
                 }}
                 index={index}
                 selectItem={selectItem}
